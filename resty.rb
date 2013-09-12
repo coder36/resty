@@ -43,7 +43,11 @@ class Commands
 
 	def pwd(args)
 		s = @pwd.inject("") { |res,n| res + "/" + n }
-		puts s.empty? ? "/" : s 
+		if @urls.empty?
+			puts "/"
+		else
+			puts "#{@urls.first} :: #{s}" 
+		end
 	end
 
 	def cd(args)
@@ -112,7 +116,7 @@ class Commands
 	def get_url(rel)
 		url = ""
 		@json.last["links"].each do |n|
-			url = n["url"] if n["rel"] == rel
+			url = n["uri"] if n["rel"] == rel
 		end
 		url
 	end

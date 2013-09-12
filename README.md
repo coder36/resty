@@ -20,11 +20,11 @@ Example usage
 	  "links": [
 	    {
 	      "rel": "self",
-	      "url": "http://localhost:4567/customer/mark"
+	      "uri": "http://localhost:4567/customer/mark"
 	    },
 	    {
 	      "rel": "address",
-	      "url": "http://localhost:4567/customer/mark/address"
+	      "uri": "http://localhost:4567/customer/mark/address"
 	    }
 	  ],
 	  "name": "mark"
@@ -36,13 +36,13 @@ Example usage
 	$ ls
 	self
 	$ pwd
-	/address
+	http://localhost:4567/customer/mark :: address
 	$ p
 	{
 	  "links": [
 	    {
 	      "rel": "self",
-	      "url": "http://localhost:4567/customer/mark/address"
+	      "uri": "http://localhost:4567/customer/mark/address"
 	    }
 	  ],
 	  "postcode": "NE13 6EY"

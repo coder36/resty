@@ -27,6 +27,6 @@ end
 def add_link( json, rel, url ) 
 	j = {}
 	j["rel"] = rel
-	j["url"] = url
+	j["uri"] = url
 	json["links"] << j
 end
